@@ -12,5 +12,5 @@ image.onload = () => {
 }
 
 function draw() {
-    context.drawImage(image, 0, 0, canvas.width, canvas.height)
+    context.drawImage(image, 0, 0, 143, 167)
 }
