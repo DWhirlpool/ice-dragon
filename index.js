@@ -42,7 +42,7 @@ function loopDraw() {
         currentOffset = 0
     }
 
-    const newTime = Math.Floor((Date.now() - startTime) / 1000)
+    const newTime = Math.floor((Date.now() - startTime) / 1000)
 
     secondsCount.innerText = newTime
 
