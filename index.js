@@ -1,7 +1,26 @@
 const canvas = document.querySelector('canvas')
 const secondsCount = document.querySelector('.seconds')
 const context = canvas.getContext('2d')
+const level = document.querySelector(".grade");
 const iceDragonDimensions = {width: 750, height: 750}
+
+const levels = {
+    5: "Jr Assistant",
+    10: "Sr Assistant",
+    15: "Master Assistant",
+    35: "S Tier Assistant",
+    65: "Junior Keeper",
+    450: "Sage",
+    650: "Hermit",
+    1000: "Senior Hermit",
+    1500: "Keeper",
+    2500: "Master",
+    3500: "Underlord",
+    4500: "Lord",
+    10500: "OverLord",
+    20500: "King",
+    30500: "Anunnaki"
+}
 
 const startTime = Date.now()
 
@@ -45,6 +64,10 @@ function loopDraw() {
     const newTime = Math.floor((Date.now() - startTime) / 1000)
 
     secondsCount.innerText = newTime
+
+    if(levels[newTime]) {
+        level.innerText = levels[newTime]
+    }
 
     requestAnimationFrame(loopDraw)
 }
